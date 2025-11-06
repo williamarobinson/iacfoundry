@@ -1,0 +1,39 @@
+{
+  "developer": "snowflakedb",
+  "provider": "snowflake",
+  "version": "v2.10.0",
+  "githubDocsUrl": "https://github.com/Snowflake-Labs/terraform-provider-snowflake/tree/{version}/docs/resources",
+  "rawMarkdownUrlPattern": "https://raw.githubusercontent.com/Snowflake-Labs/terraform-provider-snowflake/main/docs/resources/{resource}.md",
+  "markers": {
+    "argument_start": "",
+    "argument_end": ""
+  },
+  "patterns": {
+    "section_required": "^###\\s+Required\\s*$",
+    "section_optional": "^###\\s+Optional\\s*$",
+    "section_readonly": "^###\\s+Read-Only\\s*$",
+    "block_anchor": "<a id=\\\"nestedblock--([^\\\"]+)\\\"></a>",
+    "block_header": "^###\\s+Nested Schema for [`']?([A-Za-z0-9_.-]+)[`']?\\s*$",
+    "arg_line": "^-\\s+`?([A-Za-z0-9_]+)`?\\s*\\(([^)]+)\\)\\s*(.*)$",
+    "inference": {
+      "is_block": "^block\\b|^block list\\b|^list of object",
+      "quantity_multiple": "one or more|zero or more|at least one",
+      "quantity_single": "a single|exactly one",
+      "type_string": "^string\\b",
+      "type_number": "^number\\b",
+      "type_boolean": "^boolean\\b",
+      "type_map": "^map\\b",
+      "type_set": "^set\\b",
+      "type_object": "^object\\b",
+      "type_list_object": "^list of object",
+      "modifier_sensitive": "sensitive"
+    }
+  },
+  "hierarchy": {
+    "blocks_use_anchors": true,
+    "blocks_use_references": false,
+    "required_optional_by_section": true,
+    "types_explicit": true
+  },
+  "debug": true
+}
