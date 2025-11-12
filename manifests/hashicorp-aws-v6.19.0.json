@@ -4,7 +4,7 @@
         "provider": "aws",
         "version": "v6.19.0",
         "githubDocsUrl": "https://github.com/hashicorp/terraform-provider-aws/tree/{version}/website/docs/r",
-        "rawMarkdownUrlPattern": "https://raw.githubusercontent.com/hashicorp/terraform-provider-aws/refs/heads/main/website/docs/r/{resource}.markdown"
+        "rawMarkdownUrlPattern": "https://raw.githubusercontent.com/hashicorp/terraform-provider-aws/refs/heads/main/website/docs/r/{resource}.html.markdown"
     },
     "Module": {
         "markers": {
@@ -38,5 +38,8 @@
             "types_explicit": false
         }
     },
-    "Resource Graph": {}
+    "ResourceGraph": {
+        "enableFullDependencyScan": false,
+        "defaultResource": "vpc"
+    }
 }
