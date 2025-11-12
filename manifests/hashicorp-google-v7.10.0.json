@@ -1,38 +1,42 @@
 {
-  "developer": "hashicorp",
-  "provider": "google",
-  "version": "v7.10.0",
-  "githubDocsUrl": "https://github.com/hashicorp/terraform-provider-google/tree/{version}/website/docs/r",
-  "rawMarkdownUrlPattern": "https://raw.githubusercontent.com/hashicorp/terraform-provider-google/refs/heads/main/website/docs/r/{resource}.html.markdown",
-  "markers": {
-    "argument_start": "## Argument[s]? Reference",
-    "argument_end": "## Attribute[s]? Reference"
-  },
-  "patterns": {
-    "arg_line_inline": "^\\*\\s*`([^`]+)`\\s*-\\s*\\((Required|Optional)\\)\\s*([^\\n]*)$",
-    "block_header": "^(?:A|An|The)\\s+((?:`[^`]+`(?:\\s*,\\s*`[^`]+`)*)(?:\\s+(?:and|or)\\s+`[^`]+`)?)\\s+blocks?\\s+support[s]?\\s+the\\s+following:",
-    "hr": "^\\s*-{3,}\\s*$",
-    "block_ref_phrase": "(?:as\\s+defined\\s+(?:below|above))",
-    "backticked_names": "`([^`]+)`",
-    "inference": {
-      "is_block": "^block\\b|^block list\\b|^list of object",
-      "quantity_multiple": "one or more|zero or more|at least one",
-      "quantity_single": "a single|exactly one",
-      "type_string": "^string\\b",
-      "type_number": "^number\\b",
-      "type_boolean": "^boolean\\b",
-      "type_map": "^map\\b",
-      "type_set": "^set\\b",
-      "type_object": "^object\\b",
-      "type_list_object": "^list of object",
-      "modifier_sensitive": "sensitive"
-    }
-  },
-  "hierarchy": {
-    "blocks_use_anchors": false,
-    "blocks_use_references": true,
-    "required_optional_by_section": false,
-    "types_explicit": false
-  },
-  "debug": true
+    "Global": {
+        "developer": "hashicorp",
+        "provider": "google",
+        "version": "v7.10.0",
+        "githubDocsUrl": "https://github.com/hashicorp/terraform-provider-google/tree/{version}/website/docs/r",
+        "rawMarkdownUrlPattern": "https://raw.githubusercontent.com/hashicorp/terraform-provider-google/refs/heads/main/website/docs/r/{resource}.html.markdown"
+    },
+    "Module": {
+        "markers": {
+            "argument_start": "## Argument[s]? Reference",
+            "argument_end": "## Attribute[s]? Reference"
+        },
+        "patterns": {
+            "arg_line_inline": "^\\*\\s*`([^`]+)`\\s*-\\s*\\((Required|Optional)\\)\\s*([^\\n]*)$",
+            "block_header": "^(?:A|An|The)\\s+((?:`[^`]+`(?:\\s*,\\s*`[^`]+`)*)(?:\\s+(?:and|or)\\s+`[^`]+`)?)\\s+blocks?\\s+support[s]?\\s+the\\s+following:",
+            "hr": "^\\s*-{3,}\\s*$",
+            "block_ref_phrase": "(?:as\\s+defined\\s+(?:below|above))",
+            "backticked_names": "`([^`]+)`",
+            "inference": {
+                "is_block": "^block\\b|^block list\\b|^list of object",
+                "quantity_multiple": "one or more|zero or more|at least one",
+                "quantity_single": "a single|exactly one",
+                "type_string": "^string\\b",
+                "type_number": "^number\\b",
+                "type_boolean": "^boolean\\b",
+                "type_map": "^map\\b",
+                "type_set": "^set\\b",
+                "type_object": "^object\\b",
+                "type_list_object": "^list of object",
+                "modifier_sensitive": "sensitive"
+            }
+        },
+        "hierarchy": {
+            "blocks_use_anchors": false,
+            "blocks_use_references": true,
+            "required_optional_by_section": false,
+            "types_explicit": false
+        }
+    },
+    "Resource Graph": {}
 }
