@@ -1,0 +1,44 @@
+{
+  "Global": {
+    "developer": "snowflakedb",
+    "provider": "snowflake",
+    "version": "v2.10.0",
+    "githubDocsUrl": "https://github.com/Snowflake-Labs/terraform-provider-snowflake/tree/{version}/docs/resources",
+    "rawMarkdownUrlPattern": "https://raw.githubusercontent.com/Snowflake-Labs/terraform-provider-snowflake/main/docs/resources/{resource}.md",
+    "markers": {
+      "argument_start": null,
+      "argument_end": null
+    },
+    "patterns": {
+      "arg_line_inline": null,
+      "block_header": null,
+      "hr": null,
+      "block_ref_phrase": null,
+      "backticked_names": null,
+      "inference": {
+        "is_block": null,
+        "quantity_multiple": null,
+        "quantity_single": null,
+        "type_string": null,
+        "type_number": null,
+        "type_boolean": null,
+        "type_map": null,
+        "type_set": null,
+        "type_object": null,
+        "type_list_object": null,
+        "modifier_sensitive": null
+      }
+    },
+    "hierarchy": {
+      "blocks_use_anchors": null,
+      "blocks_use_references": null,
+      "required_optional_by_section": null,
+      "types_explicit": null
+    }
+  },
+  "Module": {},
+  "ResourceGraph": {
+    "defaultResource": "database",
+    "enableFullDependencyScan": false
+  }
+}

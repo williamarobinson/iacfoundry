@@ -1,17 +1,17 @@
 {
   "Global": {
     "developer": "hashicorp",
-    "provider": "azurerm",
-    "version": "v4.51.0",
-    "githubDocsUrl": "https://github.com/hashicorp/terraform-provider-azurerm/tree/{version}/website/docs/r",
-    "rawMarkdownUrlPattern": "https://raw.githubusercontent.com/hashicorp/terraform-provider-azurerm/{version}/website/docs/r/{resource}.html.markdown",
+    "provider": "google",
+    "version": "v7.10.0",
+    "githubDocsUrl": "https://github.com/hashicorp/terraform-provider-google/tree/{version}/website/docs/r",
+    "rawMarkdownUrlPattern": "https://raw.githubusercontent.com/hashicorp/terraform-provider-google/refs/heads/main/website/docs/r/{resource}.html.markdown",
     "markers": {
       "argument_start": "## Argument[s]? Reference",
       "argument_end": "## Attribute[s]? Reference"
     },
     "patterns": {
       "arg_line_inline": "^\\*\\s*`([^`]+)`\\s*-\\s*\\((Required|Optional)\\)\\s*([^\\n]*)$",
-      "block_header": "^(?:(?:A|An|The)\\s+)?((?:`[^`]+`(?:\\s*,\\s*`[^`]+`)*)(?:\\s+(?:and|or)\\s+`[^`]+`)?)\\s+blocks?\\s+support[s]?\\s+the\\s+following:",
+      "block_header": "^(?:A|An|The)\\s+((?:`[^`]+`(?:\\s*,\\s*`[^`]+`)*)(?:\\s+(?:and|or)\\s+`[^`]+`)?)\\s+blocks?\\s+support[s]?\\s+the\\s+following:",
       "hr": "^\\s*-{3,}\\s*$",
       "block_ref_phrase": "(?:as\\s+(defined|documented)\\s+(?:below|above))",
       "backticked_names": "`([^`]+)`",
@@ -38,7 +38,7 @@
   },
   "Module": {},
   "ResourceGraph": {
-    "defaultResource": "subnet",
+    "defaultResource": "compute_instance",
     "enableFullDependencyScan": false
   }
 }
