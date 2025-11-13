@@ -38,7 +38,7 @@
   },
   "Module": {},
   "ResourceGraph": {
-    "defaultResource": "subnet",
+    "defaultResource": "subscription",
     "enableFullDependencyScan": false
   }
 }

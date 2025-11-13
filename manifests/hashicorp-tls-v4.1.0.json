@@ -4,7 +4,7 @@
     "provider": "tls",
     "version": "v4.1.0",
     "githubDocsUrl": "https://github.com/hashicorp/terraform-provider-tls/tree/{version}/docs/resources",
-    "rawMarkdownUrlPattern": "https://raw.githubusercontent.com/hashicorp/terraform-provider-tls/refs/heads/main/docs/resources/{resource}.md",
+    "rawMarkdownUrlPattern": "https://raw.githubusercontent.com/hashicorp/terraform-provider-tls/refs/heads/{version}/docs/resources/{resource}.md",
     "markers": {
       "argument_start": "",
       "argument_end": ""

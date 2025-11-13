@@ -4,7 +4,7 @@
     "provider": "random",
     "version": "v3.7.2",
     "githubDocsUrl": "https://github.com/hashicorp/terraform-provider-random/tree/{version}/docs/resources",
-    "rawMarkdownUrlPattern": "https://raw.githubusercontent.com/hashicorp/terraform-provider-random/refs/heads/main/docs/resources/{resource}.md",
+    "rawMarkdownUrlPattern": "https://raw.githubusercontent.com/hashicorp/terraform-provider-random/refs/heads/{version}/docs/resources/{resource}.md",
     "markers": {
       "argument_start": "",
       "argument_end": ""

@@ -4,7 +4,7 @@
     "provider": "azuread",
     "version": "v3.6.0",
     "githubDocsUrl": "https://github.com/hashicorp/terraform-provider-azuread/tree/{version}/docs/resources",
-    "rawMarkdownUrlPattern": "https://raw.githubusercontent.com/hashicorp/terraform-provider-azuread/refs/heads/main/docs/resources/{resource}.md",
+    "rawMarkdownUrlPattern": "https://raw.githubusercontent.com/hashicorp/terraform-provider-azuread/refs/heads/{version}/docs/resources/{resource}.md",
     "markers": {
       "argument_start": "## Argument[s]? Reference",
       "argument_end": "## Attribute[s]? Reference"
@@ -38,7 +38,7 @@
   },
   "Module": {},
   "ResourceGraph": {
-    "defaultResource": null,
+    "defaultResource": "user",
     "enableFullDependencyScan": null
   }
 }

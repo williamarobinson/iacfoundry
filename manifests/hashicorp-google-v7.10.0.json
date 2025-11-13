@@ -4,7 +4,7 @@
     "provider": "google",
     "version": "v7.10.0",
     "githubDocsUrl": "https://github.com/hashicorp/terraform-provider-google/tree/{version}/website/docs/r",
-    "rawMarkdownUrlPattern": "https://raw.githubusercontent.com/hashicorp/terraform-provider-google/refs/heads/main/website/docs/r/{resource}.html.markdown",
+    "rawMarkdownUrlPattern": "https://raw.githubusercontent.com/hashicorp/terraform-provider-google/refs/heads/{version}/website/docs/r/{resource}.html.markdown",
     "markers": {
       "argument_start": "## Argument[s]? Reference",
       "argument_end": "## Attribute[s]? Reference"
