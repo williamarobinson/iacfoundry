@@ -6,7 +6,7 @@
     "githubDocsUrl": "https://github.com/hashicorp/terraform-provider-time/tree/{version}/docs/resources",
     "rawMarkdownUrlPattern": "https://raw.githubusercontent.com/hashicorp/terraform-provider-time/refs/heads/{version}/docs/resources/{resource}.md",
     "color": "orange",
-    "icon": "time.png",
+    "icon": "hashicorp.png",
     "markers": {
       "argument_start": "",
       "argument_end": ""

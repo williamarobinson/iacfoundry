@@ -6,7 +6,7 @@
     "githubDocsUrl": "https://github.com/hashicorp/terraform-provider-tls/tree/{version}/docs/resources",
     "rawMarkdownUrlPattern": "https://raw.githubusercontent.com/hashicorp/terraform-provider-tls/refs/heads/{version}/docs/resources/{resource}.md",
     "color": "teal",
-    "icon": "tls.png",
+    "icon": "hashicorp.png",
     "markers": {
       "argument_start": "",
       "argument_end": ""
