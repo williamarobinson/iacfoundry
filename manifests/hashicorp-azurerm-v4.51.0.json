@@ -5,6 +5,8 @@
     "version": "v4.51.0",
     "githubDocsUrl": "https://github.com/hashicorp/terraform-provider-azurerm/tree/{version}/website/docs/r",
     "rawMarkdownUrlPattern": "https://raw.githubusercontent.com/hashicorp/terraform-provider-azurerm/{version}/website/docs/r/{resource}.html.markdown",
+    "color": "purple",
+    "icon": "azurerm.png",
     "markers": {
       "argument_start": "## Argument[s]? Reference",
       "argument_end": "## Attribute[s]? Reference"

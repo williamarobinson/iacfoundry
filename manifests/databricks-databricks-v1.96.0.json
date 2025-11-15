@@ -5,6 +5,8 @@
     "version": "v1.96.0",
     "githubDocsUrl": "https://github.com/databricks/terraform-provider-databricks/tree/{version}/docs/resources",
     "rawMarkdownUrlPattern": "https://raw.githubusercontent.com/databricks/terraform-provider-databricks/refs/heads/{version}/docs/resources/{resource}.md",
+    "color": "yellow",
+    "icon": "databricks.png",
     "markers": {
       "argument_start": "## Argument[s]? Reference",
       "argument_end": "## Attribute[s]? Reference"

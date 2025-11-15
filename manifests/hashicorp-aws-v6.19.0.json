@@ -5,6 +5,8 @@
     "version": "v6.19.0",
     "githubDocsUrl": "https://github.com/hashicorp/terraform-provider-aws/tree/{version}/website/docs/r",
     "rawMarkdownUrlPattern": "https://raw.githubusercontent.com/hashicorp/terraform-provider-aws/refs/heads/{version}/website/docs/r/{resource}.html.markdown",
+    "color": "blue",
+    "icon": "aws.png",
     "markers": {
       "argument_start": "## Argument[s]? Reference",
       "argument_end": "## Attribute[s]? Reference"
