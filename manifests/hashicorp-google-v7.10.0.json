@@ -6,7 +6,7 @@
     "githubDocsUrl": "https://github.com/hashicorp/terraform-provider-google/tree/{version}/website/docs/r",
     "rawMarkdownUrlPattern": "https://raw.githubusercontent.com/hashicorp/terraform-provider-google/refs/heads/{version}/website/docs/r/{resource}.html.markdown",
     "color": "red",
-    "icon": "google.png",
+    "icon": "google-cloud.svg",
     "markers": {
       "argument_start": "## Argument[s]? Reference",
       "argument_end": "## Attribute[s]? Reference"
