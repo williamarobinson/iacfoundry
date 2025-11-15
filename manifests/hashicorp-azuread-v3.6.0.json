@@ -5,7 +5,7 @@
     "version": "v3.6.0",
     "githubDocsUrl": "https://github.com/hashicorp/terraform-provider-azuread/tree/{version}/docs/resources",
     "rawMarkdownUrlPattern": "https://raw.githubusercontent.com/hashicorp/terraform-provider-azuread/refs/heads/{version}/docs/resources/{resource}.md",
-    "color": "green",
+    "color": "#446595",
     "icon": "azuread.png",
     "markers": {
       "argument_start": "## Argument[s]? Reference",

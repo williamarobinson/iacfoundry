@@ -5,7 +5,7 @@
     "version": "v3.7.2",
     "githubDocsUrl": "https://github.com/hashicorp/terraform-provider-random/tree/{version}/docs/resources",
     "rawMarkdownUrlPattern": "https://raw.githubusercontent.com/hashicorp/terraform-provider-random/refs/heads/{version}/docs/resources/{resource}.md",
-    "color": "gray",
+    "color": "#050912",
     "icon": "hashicorp.png",
     "markers": {
       "argument_start": "",
