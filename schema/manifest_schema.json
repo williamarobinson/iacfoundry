@@ -1,0 +1,463 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "Terraform Provider Manifest Schema",
+    "description": "A schema describing how Terraform provider documentation manifests should be structured.",
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+        "Global": {
+            "title": "Global Settings",
+            "description": "Settings that apply to the entire provider and all generation processes.",
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "developer": {
+                    "title": "Developer",
+                    "type": [
+                        "string",
+                        "null"
+                    ],
+                    "description": "Developer or organization (e.g., hashicorp, databricks).",
+                    "default": null,
+                    "example": "hashicorp",
+                    "details": ""
+                },
+                "provider": {
+                    "title": "Provider",
+                    "type": [
+                        "string",
+                        "null"
+                    ],
+                    "description": "Terraform provider name (e.g., azurerm, azuread, aws).",
+                    "default": null,
+                    "example": "azurerm",
+                    "details": ""
+                },
+                "version": {
+                    "title": "Provider Version",
+                    "type": "string",
+                    "description": "Provider version tag or branch.",
+                    "default": "main",
+                    "example": "v4.51.0",
+                    "details": ""
+                },
+                "githubDocsUrl": {
+                    "title": "GitHub Documentation Base URL",
+                    "type": [
+                        "string",
+                        "null"
+                    ],
+                    "description": "URL template for browsing provider docs. Supports {version}.",
+                    "default": null,
+                    "example": "https://github.com/hashicorp/terraform-provider-azurerm/tree/{version}/website/docs/r",
+                    "details": ""
+                },
+                "rawMarkdownUrlPattern": {
+                    "title": "Raw Markdown URL Pattern",
+                    "type": [
+                        "string",
+                        "null"
+                    ],
+                    "description": "URL template to fetch raw markdown. Supports dynamic {version} and {resource}.  For version to work do not include /refs/heads/ in the URL.",
+                    "default": "",
+                    "example": "https://raw.githubusercontent.com/<developer_name>/terraform-provider-<provider>/{version}/website/docs/r/{resource}.html.markdown",
+                    "details": ""
+                },
+                "icon": {
+                    "title": "Tile Icon",
+                    "description": "Icon for provider tile",
+                    "type": [
+                        "string",
+                        "null"
+                    ],
+                    "default": "",
+                    "example": "azure.png"
+                },
+                "color": {
+                    "title": "Interface Card Color",
+                    "description": "Color for the provider card",
+                    "type": [
+                        "string",
+                        "null"
+                    ],
+                    "default": "#050912",
+                    "example": "blue"
+                },
+                "markers": {
+                    "title": "Section Markers",
+                    "description": "Markers indicating start/end of argument sections.",
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                        "argument_start": {
+                            "title": "Argument Section Start",
+                            "type": [
+                                "string",
+                                "null"
+                            ],
+                            "description": "Marker identifying where arguments begin.",
+                            "default": "",
+                            "example": "## Argument[s]? Reference",
+                            "details": ""
+                        },
+                        "argument_end": {
+                            "title": "Argument Section End",
+                            "type": [
+                                "string",
+                                "null"
+                            ],
+                            "description": "Marker identifying where arguments end and attributes begin.",
+                            "default": "",
+                            "example": "## Attribute[s]? Reference",
+                            "details": ""
+                        }
+                    },
+                    "required": [
+                        "argument_start",
+                        "argument_end"
+                    ]
+                },
+                "patterns": {
+                    "title": "Parsing Patterns",
+                    "description": "Regex patterns used to parse documentation.",
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                        "arg_line_inline": {
+                            "title": "Inline Argument Pattern",
+                            "type": [
+                                "string",
+                                "null"
+                            ],
+                            "description": "Regex for inline argument definitions in markdown lists.",
+                            "default": "",
+                            "example": "^\\*\\s*`([^`]+)`\\s*-\\s*\\((Required|Optional)\\)\\s*([^\\n]*)$",
+                            "details": ""
+                        },
+                        "section_required": {
+                            "title": "Required Section Pattern",
+                            "type": [
+                                "string",
+                                "null"
+                            ],
+                            "description": "Regex detecting 'Required' sections.",
+                            "default": "",
+                            "example": "^###\\s+Required\\s*$",
+                            "details": ""
+                        },
+                        "section_optional": {
+                            "title": "Optional Section Pattern",
+                            "type": [
+                                "string",
+                                "null"
+                            ],
+                            "description": "Regex detecting 'Optional' sections.",
+                            "default": "",
+                            "example": "^###\\s+Optional\\s*$",
+                            "details": ""
+                        },
+                        "section_readonly": {
+                            "title": "Read-Only Section Pattern",
+                            "type": [
+                                "string",
+                                "null"
+                            ],
+                            "description": "Regex detecting 'Read-Only' sections.",
+                            "default": "",
+                            "example": "^###\\s+Read-Only\\s*$",
+                            "details": ""
+                        },
+                        "block_anchor": {
+                            "title": "Block Anchor Pattern",
+                            "type": [
+                                "string",
+                                "null"
+                            ],
+                            "description": "Regex detecting nested block anchors.",
+                            "default": "",
+                            "example": "<a id=\\\"nestedblock--([^\\\"]+)\\\"></a>",
+                            "details": ""
+                        },
+                        "block_header": {
+                            "title": "Block Header Pattern",
+                            "type": [
+                                "string",
+                                "null"
+                            ],
+                            "description": "Regex detecting nested block definition sections.",
+                            "default": "",
+                            "example": "^(?:(?:A|An|The)\\s+)?((?:`[^`]+`(?:\\s*,\\s*`[^`]+`)*)(?:\\s+(?:and|or)\\s+`[^`]+`)?)\\s+blocks?\\s+support[s]?\\s+the\\s+following:",
+                            "details": ""
+                        },
+                        "hr": {
+                            "title": "Horizontal Rule Pattern",
+                            "type": [
+                                "string",
+                                "null"
+                            ],
+                            "description": "Regex for detecting '---' separators.",
+                            "default": "",
+                            "example": "^\\s*-{3,}\\s*$",
+                            "details": ""
+                        },
+                        "block_ref_phrase": {
+                            "title": "Block Reference Phrase Pattern",
+                            "type": [
+                                "string",
+                                "null"
+                            ],
+                            "description": "Regex detecting references like 'as defined below'.",
+                            "default": "",
+                            "example": "(?:as\\s+(defined|documented)\\s+(?:below|above))",
+                            "details": ""
+                        },
+                        "backticked_names": {
+                            "title": "Backticked Name Extractor",
+                            "type": [
+                                "string",
+                                "null"
+                            ],
+                            "description": "Regex for extracting names enclosed in backticks.",
+                            "default": "",
+                            "example": "`([^`]+)`",
+                            "details": ""
+                        },
+                        "inference": {
+                            "title": "Inference Patterns",
+                            "description": "Patterns used to infer types and quantities from prose.",
+                            "type": "object",
+                            "additionalProperties": false,
+                            "properties": {
+                                "is_block": {
+                                    "title": "Block Indicator Pattern",
+                                    "type": [
+                                        "string",
+                                        "null"
+                                    ],
+                                    "description": "Detects block definitions.",
+                                    "default": "",
+                                    "example": "^block\\b|^block list\\b|^list of object",
+                                    "details": ""
+                                },
+                                "quantity_multiple": {
+                                    "title": "Multiple Quantity Pattern",
+                                    "type": [
+                                        "string",
+                                        "null"
+                                    ],
+                                    "description": "Matches 'one or more', 'zero or more', etc.",
+                                    "default": "",
+                                    "example": "one or more|zero or more|at least one",
+                                    "details": ""
+                                },
+                                "quantity_single": {
+                                    "title": "Single Quantity Pattern",
+                                    "type": [
+                                        "string",
+                                        "null"
+                                    ],
+                                    "description": "Matches exact single-item phrasing.",
+                                    "default": "",
+                                    "example": "a single|exactly one",
+                                    "details": ""
+                                },
+                                "type_string": {
+                                    "title": "String Type Pattern",
+                                    "type": [
+                                        "string",
+                                        "null"
+                                    ],
+                                    "description": "Matches 'string'.",
+                                    "default": "",
+                                    "example": "^string\\b",
+                                    "details": ""
+                                },
+                                "type_number": {
+                                    "title": "Number Type Pattern",
+                                    "type": [
+                                        "string",
+                                        "null"
+                                    ],
+                                    "description": "Matches 'number'.",
+                                    "default": "",
+                                    "example": "^number\\b",
+                                    "details": ""
+                                },
+                                "type_boolean": {
+                                    "title": "Boolean Type Pattern",
+                                    "type": [
+                                        "string",
+                                        "null"
+                                    ],
+                                    "description": "Matches 'boolean'.",
+                                    "default": "",
+                                    "example": "^boolean\\b",
+                                    "details": ""
+                                },
+                                "type_map": {
+                                    "title": "Map Type Pattern",
+                                    "type": [
+                                        "string",
+                                        "null"
+                                    ],
+                                    "description": "Matches 'map'.",
+                                    "default": "",
+                                    "example": "^map\\b",
+                                    "details": ""
+                                },
+                                "type_set": {
+                                    "title": "Set Type Pattern",
+                                    "type": [
+                                        "string",
+                                        "null"
+                                    ],
+                                    "description": "Matches 'set'.",
+                                    "default": "",
+                                    "example": "^set\\b",
+                                    "details": ""
+                                },
+                                "type_object": {
+                                    "title": "Object Type Pattern",
+                                    "type": [
+                                        "string",
+                                        "null"
+                                    ],
+                                    "description": "Matches 'object'.",
+                                    "default": "",
+                                    "example": "^object\\b",
+                                    "details": ""
+                                },
+                                "type_list_object": {
+                                    "title": "List of Object Pattern",
+                                    "type": [
+                                        "string",
+                                        "null"
+                                    ],
+                                    "description": "Matches 'list of object'.",
+                                    "default": "",
+                                    "example": "^list of object",
+                                    "details": ""
+                                },
+                                "modifier_sensitive": {
+                                    "title": "Sensitive Modifier Pattern",
+                                    "type": [
+                                        "string",
+                                        "null"
+                                    ],
+                                    "description": "Matches 'sensitive'.",
+                                    "default": "",
+                                    "example": "sensitive",
+                                    "details": ""
+                                }
+                            },
+                            "required": []
+                        }
+                    },
+                    "required": []
+                },
+                "hierarchy": {
+                    "title": "Hierarchy Flags",
+                    "description": "Controls parser strategy based on the provider's documentation style.",
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                        "blocks_use_anchors": {
+                            "title": "Blocks Use Anchors",
+                            "type": [
+                                "boolean",
+                                "null"
+                            ],
+                            "description": "If true, documentation uses markdown anchors for block grouping.",
+                            "default": false,
+                            "example": false,
+                            "details": ""
+                        },
+                        "blocks_use_references": {
+                            "title": "Blocks Use References",
+                            "type": [
+                                "boolean",
+                                "null"
+                            ],
+                            "description": "If true, blocks are defined elsewhere and referenced.",
+                            "default": true,
+                            "example": true,
+                            "details": ""
+                        },
+                        "required_optional_by_section": {
+                            "title": "Required/Optional By Section",
+                            "type": [
+                                "boolean",
+                                "null"
+                            ],
+                            "description": "If true, required/optional is defined by the section header.",
+                            "default": false,
+                            "example": false,
+                            "details": ""
+                        },
+                        "types_explicit": {
+                            "title": "Types Explicitly Declared",
+                            "type": [
+                                "boolean",
+                                "null"
+                            ],
+                            "description": "If true, types are explicitly listed in documentation prose.",
+                            "default": false,
+                            "example": false,
+                            "details": ""
+                        }
+                    },
+                    "required": []
+                }
+            },
+            "required": [
+                "developer",
+                "provider",
+                "version",
+                "githubDocsUrl",
+                "rawMarkdownUrlPattern"
+            ]
+        },
+        "Module": {
+            "title": "Module Generation Settings",
+            "description": "Settings controlling module output behavior.",
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {},
+            "details": ""
+        },
+        "ResourceGraph": {
+            "title": "Resource Graph Settings",
+            "description": "Defines settings for dependency graph visualization.",
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "defaultResource": {
+                    "title": "Default Resource",
+                    "type": [
+                        "string",
+                        "null"
+                    ],
+                    "description": "Resource shown first when graph loads.",
+                    "default": null,
+                    "example": "subscription",
+                    "details": ""
+                },
+                "enableFullDependencyScan": {
+                    "title": "Enable Full Dependency Scan",
+                    "type": [
+                        "boolean",
+                        "null"
+                    ],
+                    "description": "If true, scans all resources for incoming references.",
+                    "default": false,
+                    "example": false,
+                    "details": ""
+                }
+            },
+            "required": []
+        }
+    },
+    "required": [
+        "Global"
+    ]
+}
