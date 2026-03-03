@@ -1,6 +1,7 @@
 {
   "Global": {
     "developer": "hashicorp",
+    "zip_path": "modules/{developer}/{provider}/{resource}",
     "provider": "random",
     "version": "v3.7.2",
     "githubDocsUrl": "https://github.com/hashicorp/terraform-provider-random/tree/{version}/docs/resources",

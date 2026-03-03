@@ -4,6 +4,7 @@
     "provider": "time",
     "version": "v0.13.1",
     "githubDocsUrl": "https://github.com/hashicorp/terraform-provider-time/tree/{version}/docs/resources",
+    "zip_path": "modules/{developer}/{provider}/{resource}",
     "rawMarkdownUrlPattern": "https://raw.githubusercontent.com/hashicorp/terraform-provider-time/{version}/docs/resources/{resource}.md",
     "color": "#969696",
     "icon": "hashicorp.png",

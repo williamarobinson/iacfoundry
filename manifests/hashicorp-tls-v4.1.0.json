@@ -1,6 +1,7 @@
 {
   "Global": {
     "developer": "hashicorp",
+    "zip_path": "modules/{developer}/{provider}/{resource}",
     "provider": "tls",
     "version": "v4.1.0",
     "githubDocsUrl": "https://github.com/hashicorp/terraform-provider-tls/tree/{version}/docs/resources",
