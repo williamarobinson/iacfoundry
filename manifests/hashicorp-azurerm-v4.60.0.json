@@ -6,7 +6,6 @@
     "icon": "azurerm.png",
     "version": "v4.60.0",
     "github_url": "https://github.com/hashicorp/terraform-provider-azurerm",
-    "githubDocsUrl": "https://github.com/hashicorp/terraform-provider-azurerm/tree/{version}/website/docs/r",
     "rawMarkdownUrlPattern": "https://raw.githubusercontent.com/hashicorp/terraform-provider-azurerm/{version}/website/docs/r/{resource}.html.markdown"
   },
   "Module": {
